@@ -6,8 +6,18 @@ env:
   - AUTH=yes USER=patrick PASSWORD=swordfish
   - AUTH=no
 
+sudo: required
 
-before_script: npm start
+services:
+  - docker
+
+before_install:
+  - docker build -t urlshortener .
+  - docker run -d -p 3000:3000 --name myshortener urlshortener
 
 script: npm test
+
+after_script: 
+  - docker stop myshortener
+  - docker rm myshortener
 
