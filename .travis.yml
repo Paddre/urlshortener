@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - "7"
+
+env:
+  - AUTH=yes
+  - AUTH=no
+
+before-script: npm install
+script: npm test
+
