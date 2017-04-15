@@ -3,9 +3,12 @@ node_js:
   - "7"
 
 env:
-  - AUTH=yes
+  - AUTH=yes USER=patrick PASSWORD=swordfish
   - AUTH=no
 
-before-script: npm install
+before-script: 
+  - npm install
+  - npm start
+  
 script: npm test
 
