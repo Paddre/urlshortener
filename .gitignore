@@ -1,4 +1,6 @@
 # IDEA Ignores #
+
+node_modules/
 ################
 *.iml
 *.ipr
