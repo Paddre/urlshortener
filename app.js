@@ -119,8 +119,7 @@ app.get('/', (req, res) => {
 
 app.all('*', (req, res) => {
     res.status(404).end('Not Found');
-    console.warn('Warning: Request for unknown route or unsupported 
-method:', req.url);
+    console.warn('Request for unknown route or unsupported method:', req.url);
 });
 
 let files = fs.readdirSync(mappingPath);
