@@ -6,9 +6,7 @@ env:
   - AUTH=yes USER=patrick PASSWORD=swordfish
   - AUTH=no
 
-before-script: 
-  - npm install
-  - npm start
+before-script: npm install;npm start
   
 script: npm test
 
